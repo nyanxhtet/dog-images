@@ -53,5 +53,27 @@ table {
 /* Broswer styling starts here */
 
 
+.image{
+  height: 300px;
+  width: auto;
+  padding: 20px;
+}
+
+.breedsBar{
+  text-align: center;
+}
+
+#title{
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .image {
+    max-width: : 100%;
+  }
+}
 
 

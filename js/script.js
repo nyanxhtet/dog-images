@@ -2,6 +2,7 @@ $(function(){
 
   var $breeds = $('#breeds');
   var $imageContainer= $('#imageContainer');
+  var $closeButton = $('#closeButton');
 
   $.ajax({
 
@@ -17,7 +18,7 @@ $(function(){
      });
 
      $(document).ready(function(){
-     $('#breeds').on('change',function(){
+     $('#submitButton').on('click',function(){
 
        $.ajax({
          type:'GET',
@@ -26,12 +27,16 @@ $(function(){
          success: function(response){
            var imageUrl = JSON.parse(response).message;
            $imageContainer.append('<img class=\'image\' src='+imageUrl+'>');
-           $('#image').append('<button class=\'closeButton\'>Close </button>;');
-         }
-         });
+         }});
+
+
      });
    });
 
+
+   $('body').on('click','img',function(){
+     this.remove();
+   })
 
 
 
