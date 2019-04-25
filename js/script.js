@@ -1,11 +1,13 @@
-$(function(){
+var dogs = (function(){
 
   var $breeds = $('#breeds');
   var $imageContainer= $('#imageContainer');
   var $closeButton = $('#closeButton');
 
-  $.ajax({
 
+  function getBreedList (){
+
+    $.ajax({
      type:'GET',
      url: 'https://dog.ceo/api/breeds/list/all',
      dataType:'text',
@@ -16,10 +18,9 @@ $(function(){
        });
        }
      });
+   };
 
-     $(document).ready(function(){
-     $('#submitButton').on('click',function(){
-
+   function getBreedImage(){
        $.ajax({
          type:'GET',
          url:'https://dog.ceo/api/breed/'+ ($("#breeds option:selected").text()) +'/images/random',
@@ -28,18 +29,23 @@ $(function(){
            var imageUrl = JSON.parse(response).message;
            $imageContainer.append('<img class=\'image\' src='+imageUrl+'>');
          }});
-
-
-     });
-   });
-
-
-   $('body').on('click','img',function(){
-     this.remove();
-   })
+     };
 
 
 
 
+return{
+  getBreedList: getBreedList,
+  getBreedImage: getBreedImage,
+};
+
+})();
+
+dogs.getBreedList();
+
+$(document).ready(function(){
+$('#submitButton').on('click',function(){
+  dogs.getBreedImage();
+});
 
 });
