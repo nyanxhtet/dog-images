@@ -76,7 +76,16 @@ $('#submitButton').on('click',function(){
   dogs.getBreedImage();
 });
 
-
-
+$(document).on('keyup', function(e){
+  if(e.keyCode === 27){
+    dogs.hideModal();
+  }
+})
 
 });
+
+$('body').click(function(){
+  if ($('#imageContainer').is(':visible')){
+    dogs.hideModal();
+  }
+})
