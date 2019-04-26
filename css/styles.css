@@ -57,6 +57,7 @@ table {
   height: 300px;
   width: 300px;
   padding: 20px;
+  max-width: 80%;
 }
 
 .breedsBar{
@@ -93,8 +94,7 @@ table {
   box-sizing: border-box;
   background: #fff;
   padding: 15px;
-  width: 100%;
-  max-width: 60%;
+  width: 50%;
   text-align: center;
 
 }
@@ -106,14 +106,13 @@ table {
 
 
 .modal-close{
-  positon:fixed;
+  position: relative;
   -webkit-appearance: none;
   border: 0;
   background: none;
   color: #777;
   text-decoration: underline;
   opacity: 1;
-  margin-left: 300px;
 }
 
 .modal-close:hover{
