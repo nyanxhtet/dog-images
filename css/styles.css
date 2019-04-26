@@ -55,7 +55,7 @@ table {
 
 .image{
   height: 300px;
-  width: auto;
+  width: 300px;
   padding: 20px;
 }
 
@@ -70,10 +70,69 @@ table {
 }
 
 
-@media only screen and (max-width: 600px) {
-  .image {
-    max-width: : 100%;
+#imageContainer{
+  position: fixed;
+  padding: 30px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  z-index: 999;
+  overflow: auto;
+  display: grid;
+  text-align: center;
+  display: none;
+}
+
+.modal{
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 60%;
+  text-align: center;
+
+}
+
+#imageContainer.visible{
+  display:grid;
+}
+
+
+
+.modal-close{
+  positon:fixed;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+  opacity: 1;
+  margin-left: 300px;
+}
+
+.modal-close:hover{
+  opacity: .75;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  #imageContainer{
+    max-width: 100%;
   }
+  
+  .modal{
+    max-width: 100%;
+  }
+  
 }
 
 
