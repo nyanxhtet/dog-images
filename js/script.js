@@ -26,17 +26,45 @@ var dogs = (function(){
          url:'https://dog.ceo/api/breed/'+ ($("#breeds option:selected").text()) +'/images/random',
          dataType:'text',
          success: function(response){
+
+           showModal();
+
            var imageUrl = JSON.parse(response).message;
-           $imageContainer.append('<img class=\'image\' src='+imageUrl+'>');
+
+           $imageContainer.append('<div class=\'modal\'> </div>');
+
+           $('.modal').append('<img class=\'image\' src='+imageUrl+'>');
+
+           $('.modal').append('<button class=\'modal-close\'> Close </button>');
+
+           $('.modal-close').on('click', function(){
+             hideModal();
+           });
          }});
-     };
 
+      };
 
+  function showModal(){
+    $imageContainer.addClass('visible');
+  }
+
+  function hideModal(){
+    $imageContainer.removeClass('visible');
+    $imageContainer.html('');
+  }
+  $imageContainer.on('click', function (e) {
+      var $target = e.target;
+      if ($target === $imageContainer){
+        hideModal();
+      }
+  });
 
 
 return{
   getBreedList: getBreedList,
   getBreedImage: getBreedImage,
+  showModal: showModal,
+  hideModal: hideModal,
 };
 
 })();
@@ -47,5 +75,8 @@ $(document).ready(function(){
 $('#submitButton').on('click',function(){
   dogs.getBreedImage();
 });
+
+
+
 
 });
