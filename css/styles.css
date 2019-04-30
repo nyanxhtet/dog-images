@@ -113,16 +113,14 @@ table {
   color: #777;
   text-decoration: underline;
   opacity: 1;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .modal-close:hover{
   opacity: .75;
 }
 
-
 #breeds{
-  width: 300px;
-  height: 30px;
   width: 100px;
   background-color: rgba(60,60,60, .2);
   border: none;
@@ -130,9 +128,8 @@ table {
   padding: 3px;
 }
 
-#submitButton{
-  height: 30px;
-  background-color: #grey;
+#breeds option{
+  font-family: 'Source Code Pro', monospace;;
 }
 
 #submitButton{
