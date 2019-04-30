@@ -124,6 +124,11 @@ table {
   height: 30px;
 }
 
+#submitButton{
+  height: 30px;
+  background-color: #grey;
+}
+
 
 @media screen and (max-width: 600px) {
 
