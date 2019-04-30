@@ -137,7 +137,15 @@ table {
   }
 
   .modal{
-    max-width: 100%;
+    width: 90%;
+  }
+
+  #breeds{
+    width: 50%;
+  }
+
+  #submitButton{
+    width: 50%;
   }
 
 }
