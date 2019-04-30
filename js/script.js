@@ -16,6 +16,9 @@ var dogs = (function(){
        $.each(breedsObj.message, function(key, value){
          $breeds.append('<option value='+key+'\'>'+key+'</option>;');
        });
+       $('#submitButton').on('click',function(){
+         dogs.getBreedImage();
+       });
        }
      });
    };
