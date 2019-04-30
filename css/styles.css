@@ -54,7 +54,6 @@ table {
 
 
 .image{
-  height: 300px;
   width: 300px;
   padding: 20px;
   max-width: 80%;
@@ -127,11 +126,9 @@ table {
   #imageContainer{
     max-width: 100%;
   }
-  
+
   .modal{
     max-width: 100%;
   }
-  
+
 }
-
-
