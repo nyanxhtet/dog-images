@@ -81,5 +81,6 @@ var dogs = (function(){
         dogs.hideModal();
       }
     })
+	    dogs.getBreedList();
 
   });
