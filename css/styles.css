@@ -144,6 +144,10 @@ table {
   font-family: 'Source Code Pro', monospace;;
 }
 
+#submitButton:hover{
+  background-color: #7CFC00	;
+}
+
 @media screen and (max-width: 600px) {
 
   #imageContainer{
