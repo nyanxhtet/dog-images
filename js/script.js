@@ -23,29 +23,29 @@
 	    });
 	  };
 
-	  function getBreedImage(){
-	    $.ajax({
-	      type:'GET',
-	      url:'https://dog.ceo/api/breed/'+ ($("#breeds option:selected").text()) +'/images/random',
-	      dataType:'text',
-	      success: function(response){
+	 function getBreedImage(){
+	   $.ajax({
+	     type:'GET',
+	     url:'https://dog.ceo/api/breed/'+ ($("#breeds option:selected").text()) +'/images/random',
+	     dataType:'text',
+	     success: function(response){
 
-	        showModal();
+	       showModal();
 
-	        var imageUrl = JSON.parse(response).message;
+	       var imageUrl = JSON.parse(response).message;
 
-	        $imageContainer.append('<div class=\'modal\'> </div>');
+	       $imageContainer.append('<div class=\'modal\'> </div>');
 
-	        $('.modal').append('<img class=\'image\' src='+imageUrl+'>');
+	       $('.modal').append('<img class=\'image\' src='+imageUrl+'>');
 
-	        $('.modal').append('<button class=\'modal-close\'> Close </button>');
+	       $('.modal').append('<button class=\'modal-close\'> Close </button>');
 
-	        $('.modal-close').on('click', function(){
-	          hideModal();
-	        });
-	      }});
+	       $('.modal-close').on('click', function(){
+	         hideModal();
+	       });
+	     }});
 
-	    };
+	   };
 
 	    function showModal(){
 	      $imageContainer.addClass('visible');
