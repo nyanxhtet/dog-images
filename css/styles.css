@@ -135,6 +135,13 @@ table {
   background-color: #grey;
 }
 
+#submitButton{
+  width: 60px;
+  background-color: rgba(60,60,60, .2);
+  border: none;
+  padding: 3px;
+  font-family: 'Source Code Pro', monospace;;
+}
 
 @media screen and (max-width: 600px) {
 
