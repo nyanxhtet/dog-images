@@ -57,7 +57,7 @@ var dogs = (function(){
   }
   $imageContainer.on('click', function (e) {
       var $target = e.target;
-      if ($target === $imageContainer){
+      if ($target === $imageContainer[0]){
         hideModal();
       }
   });
@@ -75,9 +75,6 @@ return{
 dogs.getBreedList();
 
 $(document).ready(function(){
-$('#submitButton').on('click',function(){
-  dogs.getBreedImage();
-});
 
 $(document).on('keyup', function(e){
   if(e.keyCode === 27){
@@ -86,9 +83,3 @@ $(document).on('keyup', function(e){
 })
 
 });
-
-$('body').click(function(){
-  if ($('#imageContainer').is(':visible')){
-    dogs.hideModal();
-  }
-})
