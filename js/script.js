@@ -8,7 +8,6 @@ var dogs = (function() {
   function getBreedList() {
 
     $.ajax({
-      ``
       type: 'GET',
       url: 'https://dog.ceo/api/breeds/list/all',
       dataType: 'text',
