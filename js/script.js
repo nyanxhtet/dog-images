@@ -2,8 +2,6 @@ var dogs = (function(){
 
   var $breeds = $('#breeds');
   var $imageContainer= $('#imageContainer');
-  var $closeButton = $('#closeButton');
-
 
   function getBreedList (){
     $.ajax({
