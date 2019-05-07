@@ -23,7 +23,7 @@ var dogs = (function(){
   function getBreedImage(){
     $.ajax({
       type:'GET',
-      url:'https://dog.ceo/api/breed/'+ ($("#breeds option:selected").text()) +'/images/random',
+      url:'https://dog.ceo/api/breed/'+ ($('#breeds option:selected').text()) +'/images/random',
       dataType:'text',
       success: function(response){
 
