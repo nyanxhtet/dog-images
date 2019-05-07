@@ -18,7 +18,7 @@ var dogs = (function(){
         });
       }
     });
-  };
+  }
 
   function getBreedImage(){
     $.ajax({
@@ -42,7 +42,7 @@ var dogs = (function(){
         });
       }});
 
-    };
+    }
 
     function showModal(){
       $imageContainer.addClass('visible');
