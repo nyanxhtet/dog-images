@@ -10,7 +10,7 @@ var dogs = (function(){
       dataType:'text',
       success: function(breed){
         var breedsObj = JSON.parse(breed);
-        $.each(breedsObj.message, function(key, value){
+        $.each(breedsObj.message, function(key){
           $breeds.append('<option value='+key+'\'>'+key+'</option>;');
         });
         $('#submitButton').on('click',function(){
